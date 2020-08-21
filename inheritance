@@ -1,0 +1,56 @@
+# Base Class
+class Person:
+    # initializing the variables
+    name = ""
+    age = 0
+
+    # defining constructor
+    def __init__(self, personName, personAge):
+        self.name = personName
+        self.age = personAge
+
+    # defining class methods
+
+    # will give the name
+    def showName(self):
+        print(self.name)
+
+    # will give the age
+    def showAge(self):
+        print(self.age)
+
+# Base Class Ends
+
+# definition of subclass starts here
+
+# Base Class in inhereted in the subclass
+
+
+class Student(Person):
+    studentId = ""
+
+    def __init__(self, studentName, studentAge, studentId):
+
+        # calling the Base class constructor
+        Person.__init__(self, studentName, studentAge)
+        self.studentId = studentId
+
+    # Student class method
+    # method return the id of the student
+    def getId(self):
+        return self.studentId
+
+
+# end of subclass definition
+
+
+# Create an object of the Base class
+person1 = Person("karan", 22)
+# call member methods of the objects
+person1.showAge()
+print(person1.showAge())
+
+# Create an object of the subclass
+student1 = Student("raj", 22, "10")
+print(student1.getId())
+student1.showName()
