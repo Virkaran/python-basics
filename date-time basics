@@ -1,0 +1,16 @@
+
+import datetime
+import calendar
+
+# function to find the day according th the date
+
+
+def find_day(date):
+    day = datetime.datetime.strptime(date, '%d %m %Y').weekday()
+    return (calendar.day_name[day])
+
+
+# date is a user input
+# date format'%d %m %Y'
+date = input()
+print(find_day(date))
