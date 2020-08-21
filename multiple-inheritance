@@ -1,0 +1,39 @@
+# definition of the class starts here
+class Person:
+
+    # defining constructor
+    def __init__(self, personName, personAge):
+        self.name = personName
+        self.age = personAge
+
+    # defining class methods
+    def showName(self):
+        print(self.name)
+
+    def showAge(self):
+        print(self.age)
+
+# end of class definition
+
+# defining another class
+
+
+class Student:
+    def __init__(self, studentId):
+        self.studentId = studentId
+
+    def getId(self):
+        return self.studentId
+
+# class inherites both the above classes
+
+
+class Details(Person, Student):
+    def __init__(self, name, age, id):
+        Person.__init__(self, name, age)
+        Student.__init__(self, id)
+
+
+# Create an object of the subclass
+detail = Details('karan', 30, '11')
+detail.showName()
