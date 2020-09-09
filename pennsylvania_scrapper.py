@@ -153,7 +153,7 @@ class PennsylvaniaScrapper:
 if __name__ == "__main__":
     """
     class object 
-    # passing the arguments in the format (url , fitstname,lastname,date)
+    passing the arguments in the format (url , firstname,lastname,date)
 
     """
     scrapper = PennsylvaniaScrapper(
